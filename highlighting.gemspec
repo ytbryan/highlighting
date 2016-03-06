@@ -2,16 +2,17 @@
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'highlighting/version'
+require 'highlighting/post_message'
 
 Gem::Specification.new do |spec|
   spec.name          = "highlighting"
   spec.version       = Highlighting::VERSION
   spec.authors       = ["bryan lim"]
   spec.email         = ["ytbryan@gmail.com"]
-
+  spec.post_install_message = Log::MESSAGE
   spec.summary       = %q{Syntax Highlighting for Rails using PrismJS.}
   spec.description   = %q{Syntax Highlighting for Rails using PrismJS.}
-  spec.homepage      = "http://github.com/ytbryan/highlighting."
+  spec.homepage      = "http://github.com/ytbryan/highlighting"
   spec.license       = "MIT"
   spec.files         = Dir["{app,lib,vendor}/**/*", "LICENSE", "README.md"]
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }

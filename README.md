@@ -27,14 +27,14 @@ $ gem install highlighting
 ```
 
 ## Usage
+Use the alias in place of xxxx in `language-xxxx`.
+
+For example: ruby, python, go, swift
 
 ```
-<pre>
-<code class="language-ruby">
-   <!-- type any ruby code you like -->
-</code>
-</pre>
-
+<%= code "language-ruby" %>
+  <!-- type any ruby code you like -->
+<% end %>
 ```
 
 ## Development
