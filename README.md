@@ -1,10 +1,8 @@
 # Highlighting
 
-Highlighting is based on [PrismJS](http://prismjs.com).
+Highlighting ships with [PrismJS](http://prismjs.com).
 
 > Prism is a lightweight, robust, elegant syntax highlighting library. It's a spin-off project from Dabblet.
-
-To use highlighting, please read this [stackoverflow post](http://stackoverflow.com/a/34373693/388280)
 
 ## Installation
 
@@ -26,8 +24,29 @@ Or install it yourself as:
 $ gem install highlighting
 ```
 
+At application.js, replace [language] with the name of language. For example: prism-ruby or prism-coffeescript
+```
+//= require jquery
+//= require jquery_ujs
+//= require turbolinks
+//= require prism
+//= require prism-[language]
+//= require prism-turbolinks #optional
+//= require_tree .
+```
+
+At application.css, add `*= require prism-[theme]` or use the default `*= require prism`
+
+```
+ *= require_tree .
+ *= require prism-[theme]
+ *= require_self
+```
+There are various other themes to choose from. For example `*= require prism-tomorrow`, `*= require prism-twilight`.
+
+
 ## Usage
-Use the alias in place of xxxx in `language-xxxx`.
+Use the alias in place of xxxx in `language-xxxx`. `language-xxxx` is a css rule here used by prismjs.
 
 For example: ruby, python, go, swift
 
@@ -36,6 +55,22 @@ For example: ruby, python, go, swift
   <!-- type any ruby code you like -->
 <% end %>
 ```
+
+## Known Issues
+
+With turbolinks enabled, prismjs is not called at page load. For quick fix, add the `//= require prism-turbolinks` line at application.js
+
+```
+//= require jquery
+//= require jquery_ujs
+//= require turbolinks
+//= require prism
+//= require prism-ruby
+//= require prism-turbolinks
+//= require_tree .
+```
+
+If you wish to add the code manually, read [prismjs not working with turbolinks](http://stackoverflow.com/questions/21278357/prism-js-not-working-with-rails-4-turbolinks/21355342#21355342)
 
 ## Development
 
