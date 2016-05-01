@@ -5,6 +5,10 @@ module Log
   ## HIGHLIGHTING
   ######################
 
+  What's new in 0.1.3?
+  - update PrismJS to 1.5.0
+
+
   What's new in 0.1.2?
   - SyntaxHelper <%= code "" %>
   Usage:

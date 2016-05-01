@@ -1,6 +1,6 @@
 # Highlighting
 
-Highlighting ships with [PrismJS](http://prismjs.com).
+Highlighting ships with the latest [PrismJS](http://prismjs.com).
 
 > Prism is a lightweight, robust, elegant syntax highlighting library. It's a spin-off project from Dabblet.
 
